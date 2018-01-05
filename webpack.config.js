@@ -4,10 +4,10 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
-    filename: "./src/index.js"
+    app: "./src/index.js"
   },
   output: {
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     path: resolve(__dirname, "dist")
   },
   devtool: 'inline-source-map',
@@ -17,7 +17,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/index.tpl.html",
       title: "React Image Tooltip",
     })
   ]

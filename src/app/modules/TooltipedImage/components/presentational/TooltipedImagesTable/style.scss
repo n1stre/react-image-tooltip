@@ -1,0 +1,21 @@
+.tooltiped-images-table {
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  width: 100%;
+  min-width: 600px;
+
+  &__head {
+    background-color: #333;
+    color: #fff;
+
+    th {
+      padding-top: 10px;
+      padding-bottom: 10px;  
+    }
+  }
+
+  td, 
+  th {
+    padding: 5px;
+  }
+}

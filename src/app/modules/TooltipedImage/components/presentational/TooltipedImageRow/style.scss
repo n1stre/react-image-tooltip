@@ -1,0 +1,19 @@
+.tooltiped-image-row {
+  // border-top: 1px solid #333;
+
+  &:nth-child(odd) {
+    background-color: rgba(0,0,0,0.05);
+  }
+
+  &__img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  &__img-cell {
+    padding: 5px;
+  }
+}

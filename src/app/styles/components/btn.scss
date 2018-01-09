@@ -1,0 +1,22 @@
+
+.btn {
+  padding: 10px 15px;
+  background-color: $blue;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+
+  &--sm {
+    padding: 3px 7px;
+  }
+
+  &--red {
+    background-color: $red;
+  }
+
+  &--yellow {
+    background-color: $yellow;
+    color: $darkBlue;
+  }
+}

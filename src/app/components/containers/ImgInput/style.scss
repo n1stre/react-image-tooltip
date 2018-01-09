@@ -1,0 +1,71 @@
+.img-input-wrapper {
+  display: inline-block;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &--is-empty {
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      content: "";
+      pointer-events: none;
+      transition: all 0.2s;
+      transform: scale(1);
+      opacity: 1;
+    }
+    
+    &:before {
+      background-color: rgba(0,0,0,0.4);
+      z-index: 21;
+    }
+
+    &:after {
+      content: "Please upload an image!";
+      text-align: center;
+      padding: 50px;
+      color: #fff;
+      z-index: 22;
+    }
+  }
+
+  &:hover:before {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  &:hover:after {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.img-input {
+  cursor: pointer;
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: relative;
+
+  input { 
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+  }
+
+  &__preview {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 10;
+
+
+  }
+}

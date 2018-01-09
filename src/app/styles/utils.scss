@@ -1,0 +1,16 @@
+.u-tar { text-align: right; }
+.u-tal { text-align: left; }
+.u-tac { text-align: center; }
+
+.u-fr { float: right; }
+.u-fl { float: left; }
+
+.u-clfx { 
+  &:after {
+    display: table;
+    content: '';
+    height: 0;
+    clear: both;
+  }
+}
+

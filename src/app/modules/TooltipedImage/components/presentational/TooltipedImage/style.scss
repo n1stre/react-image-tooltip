@@ -1,0 +1,50 @@
+.tooltiped-image {
+  display: inline-block;
+  position: relative;
+  cursor: info;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgba(0,0,0,.3);
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  &__text-wrap {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #333;
+    padding: 5px;
+    font-size: 10px;
+    color: #fff;
+    max-width: 150px;
+    left: -500px;
+    right: -500px;
+    margin: auto;
+    opacity: 0;
+    transform: translate(0, -100%);
+    transition: all 0.25s;
+    pointer-events: none;
+  }
+
+  &:hover {
+    .tooltiped-image {
+      &__text-wrap {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(0, -110%);
+
+      }
+    }
+  }
+
+  &__text {}
+
+
+}
